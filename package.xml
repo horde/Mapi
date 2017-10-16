@@ -10,7 +10,7 @@
   <email>mrubinsk@horde.org</email>
   <active>yes</active>
  </lead>
- <date>2016-03-21</date>
+ <date>2017-10-17</date>
  <version>
   <release>1.0.9</release>
   <api>1.0.0</api>
@@ -25,13 +25,6 @@
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
-   <dir name="doc">
-    <dir name="Horde">
-     <dir name="Mapi">
-      <file name="COPYING" role="doc" />
-     </dir> <!-- /doc/Horde/Mapi -->
-    </dir> <!-- /doc/Horde -->
-   </dir> <!-- /doc -->
    <dir name="lib">
     <dir name="Horde">
      <dir name="Mapi">
@@ -56,6 +49,7 @@
      </dir> <!-- /test/Horde/Mapi -->
     </dir> <!-- /test/Horde -->
    </dir> <!-- /test -->
+   <file name="LICENSE" role="doc" />
   </dir> <!-- / -->
  </contents>
  <dependencies>
@@ -91,18 +85,18 @@
  </dependencies>
  <phprelease>
   <filelist>
-   <install as="COPYING" name="doc/Horde/Mapi/COPYING" />
    <install as="Horde/Mapi.php" name="lib/Horde/Mapi.php" />
    <install as="Horde/Mapi/Exception.php" name="lib/Horde/Mapi/Exception.php" />
    <install as="Horde/Mapi/Timezone.php" name="lib/Horde/Mapi/Timezone.php" />
+   <install as="LICENSE" name="LICENSE" />
    <install as="Horde/Mapi/AllTests.php" name="test/Horde/Mapi/AllTests.php" />
    <install as="Horde/Mapi/Autoload.php" name="test/Horde/Mapi/Autoload.php" />
    <install as="Horde/Mapi/bootstrap.php" name="test/Horde/Mapi/bootstrap.php" />
+   <install as="Horde/Mapi/fixtures/filetime" name="test/Horde/Mapi/fixtures/filetime" />
    <install as="Horde/Mapi/MapiTest.php" name="test/Horde/Mapi/MapiTest.php" />
    <install as="Horde/Mapi/phpunit.xml" name="test/Horde/Mapi/phpunit.xml" />
    <install as="Horde/Mapi/TimezoneTest.php" name="test/Horde/Mapi/TimezoneTest.php" />
-   <install as="Horde/Mapi/fixtures/filetime" name="test/Horde/Mapi/fixtures/filetime" />
-   </filelist>
+  </filelist>
  </phprelease>
  <changelog>
   <release>
@@ -231,7 +225,7 @@
    <stability>
     <release>stable</release>
     <api>stable</api></stability>
-   <date>2016-03-21</date>
+   <date>2017-10-17</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
 * 
