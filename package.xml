@@ -10,7 +10,7 @@
   <email>mrubinsk@horde.org</email>
   <active>yes</active>
  </lead>
- <date>2017-10-17</date>
+ <date>2017-10-20</date>
  <version>
   <release>1.0.9</release>
   <api>1.0.0</api>
@@ -44,7 +44,6 @@
       <file name="Autoload.php" role="test" />
       <file name="bootstrap.php" role="test" />
       <file name="MapiTest.php" role="test" />
-      <file name="phpunit.xml" role="test" />
       <file name="TimezoneTest.php" role="test" />
      </dir> <!-- /test/Horde/Mapi -->
     </dir> <!-- /test/Horde -->
@@ -94,7 +93,6 @@
    <install as="Horde/Mapi/bootstrap.php" name="test/Horde/Mapi/bootstrap.php" />
    <install as="Horde/Mapi/fixtures/filetime" name="test/Horde/Mapi/fixtures/filetime" />
    <install as="Horde/Mapi/MapiTest.php" name="test/Horde/Mapi/MapiTest.php" />
-   <install as="Horde/Mapi/phpunit.xml" name="test/Horde/Mapi/phpunit.xml" />
    <install as="Horde/Mapi/TimezoneTest.php" name="test/Horde/Mapi/TimezoneTest.php" />
   </filelist>
  </phprelease>
@@ -225,7 +223,7 @@
    <stability>
     <release>stable</release>
     <api>stable</api></stability>
-   <date>2017-10-17</date>
+   <date>2017-10-20</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
 * 
