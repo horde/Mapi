@@ -1,5 +1,5 @@
 {
-    "name": "horde/horde-mapi",
+    "name": "horde/mapi",
     "description": "MAPI utility library.",
     "type": "library",
     "homepage": "https://pear.horde.org",
@@ -12,7 +12,7 @@
         }
     ],
     "version": "1.0.9",
-    "time": "2016-03-21",
+    "time": "2017-10-20",
     "repositories": [
         {
             "type": "pear",
@@ -21,9 +21,9 @@
     ],
     "require": {
         "php": "^5.3 || ^7",
-        "pear-pear.horde.org/Horde_Date": "^2.3@stable",
-        "pear-pear.horde.org/Horde_Exception": "^2@stable",
-        "pear-pear.php.net/Math_BigInteger": "^1.0.2@stable"
+        "pear-pear.horde.org/Horde_Date": "^2.3",
+        "pear-pear.horde.org/Horde_Exception": "^2",
+        "pear-pear.php.net/Math_BigInteger": "^1.0.2"
     },
     "replace": {
         "pear-pear.horde.org/Horde_Mapi": "1.*",
