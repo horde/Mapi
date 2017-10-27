@@ -1,0 +1,66 @@
+----------
+v1.0.9-git
+----------
+
+
+------
+v1.0.8
+------
+
+[mjr] Fix dependency on Horde_Date 2.3.0.
+
+
+------
+v1.0.7
+------
+
+[mjr] Work around BC break in PHP 5.5.10 with converting timezone abbreviations
+      to full timezone names.
+
+
+------
+v1.0.6
+------
+
+[jan] Mark PHP 7 as supported.
+
+
+------
+v1.0.5
+------
+
+[mjr] Remove bcmath extension requirement and add PEAR Math_BigInteger package
+      in it's place.
+
+
+------
+v1.0.4
+------
+
+[jan] Improve PSR-2 compatibility.
+
+
+------
+v1.0.3
+------
+
+[mjr] Make bcmath an optional, not required, extension (Bug #13285).
+
+
+------
+v1.0.2
+------
+
+[mjr] Clarify license is LGPL and fix package.xml/composer.json files.
+
+
+------
+v1.0.1
+------
+
+
+------
+v1.0.0
+------
+
+Initial release.
