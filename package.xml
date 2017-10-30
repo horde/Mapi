@@ -10,7 +10,7 @@
   <email>mrubinsk@horde.org</email>
   <active>yes</active>
  </lead>
- <date>2016-03-21</date>
+ <date>2017-10-30</date>
  <version>
   <release>1.0.9</release>
   <api>1.0.0</api>
@@ -28,6 +28,7 @@
    <dir name="doc">
     <dir name="Horde">
      <dir name="Mapi">
+      <file name="CHANGES" role="doc" />
       <file name="COPYING" role="doc" />
      </dir> <!-- /doc/Horde/Mapi -->
     </dir> <!-- /doc/Horde -->
@@ -91,6 +92,7 @@
  </dependencies>
  <phprelease>
   <filelist>
+   <install as="CHANGES" name="doc/Horde/Mapi/CHANGES" />
    <install as="COPYING" name="doc/Horde/Mapi/COPYING" />
    <install as="Horde/Mapi.php" name="lib/Horde/Mapi.php" />
    <install as="Horde/Mapi/Exception.php" name="lib/Horde/Mapi/Exception.php" />
@@ -231,7 +233,7 @@
    <stability>
     <release>stable</release>
     <api>stable</api></stability>
-   <date>2016-03-21</date>
+   <date>2017-10-30</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
 * 
