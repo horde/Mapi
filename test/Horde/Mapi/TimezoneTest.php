@@ -126,7 +126,7 @@ class Horde_Mapi_TimezoneTest extends Horde_Test_Case
         foreach ($this->_packed as $tz => $blob) {
             $offsets = Horde_Mapi_Timezone::getOffsetsFromSyncTZ($blob);
             foreach ($this->_offsets[$tz] as $key => $value) {
-                $this->assertEquals($value, $offsets[$key]);
+                $this->assertEquals($value, $offsets[$key], "Comparing '$key' for '$tz'");
             }
         }
     }
@@ -142,7 +142,7 @@ class Horde_Mapi_TimezoneTest extends Horde_Test_Case
             $date = new Horde_Date('2011-07-01', $tz);
             $offsets = Horde_Mapi_Timezone::getOffsetsFromDate($date);
             foreach ($offsets as $key => $value) {
-                $this->assertEquals($expected[$key], $value);
+                $this->assertEquals($expected[$key], $value, "Comparing '$key' for '$tz'");
             }
         }
     }

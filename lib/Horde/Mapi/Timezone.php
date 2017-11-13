@@ -80,14 +80,13 @@ class Horde_Mapi_Timezone
                 . 'ldstbias';
         }
         $tz = unpack($format, base64_decode($data));
-        $tz['timezone'] = $tz['bias'];
-        $tz['timezonedst'] = $tz['dstbias'];
-
         if (!Horde_Mapi::isLittleEndian()) {
             $tz['bias'] = Horde_Mapi::chbo($tz['bias']);
             $tz['stdbias'] = Horde_Mapi::chbo($tz['stdbias']);
             $tz['dstbias'] = Horde_Mapi::chbo($tz['dstbias']);
         }
+        $tz['timezone'] = $tz['bias'];
+        $tz['timezonedst'] = $tz['dstbias'];
 
         return $tz;
     }
