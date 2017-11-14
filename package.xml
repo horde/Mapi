@@ -52,7 +52,6 @@
       <file name="Autoload.php" role="test" />
       <file name="bootstrap.php" role="test" />
       <file name="MapiTest.php" role="test" />
-      <file name="phpunit.xml" role="test" />
       <file name="TimezoneTest.php" role="test" />
      </dir> <!-- /test/Horde/Mapi -->
     </dir> <!-- /test/Horde -->
@@ -103,7 +102,6 @@
    <install as="Horde/Mapi/Autoload.php" name="test/Horde/Mapi/Autoload.php" />
    <install as="Horde/Mapi/bootstrap.php" name="test/Horde/Mapi/bootstrap.php" />
    <install as="Horde/Mapi/MapiTest.php" name="test/Horde/Mapi/MapiTest.php" />
-   <install as="Horde/Mapi/phpunit.xml" name="test/Horde/Mapi/phpunit.xml" />
    <install as="Horde/Mapi/TimezoneTest.php" name="test/Horde/Mapi/TimezoneTest.php" />
    <install as="Horde/Mapi/fixtures/filetime" name="test/Horde/Mapi/fixtures/filetime" />
    </filelist>
