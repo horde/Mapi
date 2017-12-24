@@ -1,6 +1,9 @@
-----------
-v1.0.9-git
-----------
+------
+v1.0.9
+------
+
+[mjr] No longer support Math_BigInteger, require the bcmath extension instead.
+
 
 
 ------
