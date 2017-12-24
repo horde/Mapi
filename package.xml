@@ -21,7 +21,7 @@
  </stability>
  <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
  <notes>
-* 
+*
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
@@ -82,13 +82,9 @@
     <max>3.0.0alpha1</max>
     <exclude>3.0.0alpha1</exclude>
    </package>
-   <package>
-    <name>Math_BigInteger</name>
-    <channel>pear.php.net</channel>
-    <min>1.0.2</min>
-    <max>2.0.0alpha1</max>
-    <exclude>2.0.0alpha1</exclude>
-   </package>
+   <extension>
+     <name>bcmath</name>
+   </extension>
   </required>
  </dependencies>
  <phprelease>
@@ -132,7 +128,7 @@
    <date>2014-01-18</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
-* 
+*
    </notes>
   </release>
   <release>
@@ -236,7 +232,7 @@
    <date>2017-11-14</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
-* 
+*
    </notes>
   </release>
  </changelog>
