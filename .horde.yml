@@ -2,7 +2,7 @@
 id: Mapi
 name: Mapi
 full: MAPI utility library
-description: >
+description: >-
   Provides various utility classes for dealing with Microsoft MAPI structured
   data.
 list: dev
