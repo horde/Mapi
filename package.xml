@@ -13,7 +13,7 @@
  </lead>
  <date>2019-02-09</date>
  <version>
-  <release>1.0.9</release>
+  <release>1.0.10</release>
   <api>1.0.0</api>
  </version>
  <stability>
@@ -22,7 +22,7 @@
  </stability>
  <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
  <notes>
-* [mjr] No longer support Math_BigInteger, require the bcmath extension instead.
+* 
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
@@ -131,7 +131,7 @@
    <date>2014-01-18</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
-*
+* 
    </notes>
   </release>
   <release>
@@ -252,6 +252,21 @@
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
 * [mjr] No longer support Math_BigInteger, require the bcmath extension instead.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.10</release>
+    <api>1.0.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2019-02-09</date>
+   <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
+   <notes>
+* 
    </notes>
   </release>
  </changelog>
