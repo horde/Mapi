@@ -2,9 +2,8 @@
 id: Mapi
 name: Mapi
 full: MAPI utility library
-description: >
-  Provides various utility classes for dealing with Microsoft MAPI structured
-  data.
+description: |
+  Provides various utility classes for dealing with Microsoft MAPI structured data.
 list: dev
 type: library
 authors:
@@ -29,4 +28,3 @@ dependencies:
     pear:
       pear.horde.org/Horde_Date: ^2.3
       pear.horde.org/Horde_Exception: ^2
-      pear.php.net/Math_BigInteger: ^1.0.2

@@ -3,17 +3,18 @@
  <name>Horde_Mapi</name>
  <channel>pear.horde.org</channel>
  <summary>MAPI utility library</summary>
- <description>Provides various utility classes for dealing with Microsoft MAPI structured data.</description>
+ <description>Provides various utility classes for dealing with Microsoft MAPI structured data.
+</description>
  <lead>
   <name>Michael J Rubinsky</name>
   <user>mrubinsk</user>
   <email>mrubinsk@horde.org</email>
   <active>yes</active>
  </lead>
- <date>2017-11-14</date>
+ <date>2019-02-09</date>
  <version>
-  <release>1.0.9</release>
-  <api>1.0.0</api>
+  <release>1.0.9.9</release>
+  <api>1.0.0.0</api>
  </version>
  <stability>
   <release>stable</release>
@@ -82,9 +83,6 @@
     <max>3.0.0alpha1</max>
     <exclude>3.0.0alpha1</exclude>
    </package>
-   <extension>
-     <name>bcmath</name>
-   </extension>
   </required>
  </dependencies>
  <phprelease>
@@ -240,14 +238,14 @@
   </release>
   <release>
    <version>
-    <release>1.0.9</release>
-    <api>1.0.0</api>
+    <release>1.0.9.9</release>
+    <api>1.0.0.0</api>
    </version>
    <stability>
     <release>stable</release>
     <api>stable</api>
    </stability>
-   <date>2017-10-20</date>
+   <date>2019-02-09</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
 * [mjr] No longer support Math_BigInteger, require the bcmath extension instead.

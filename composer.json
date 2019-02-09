@@ -12,7 +12,7 @@
         }
     ],
     "version": "1.0.9",
-    "time": "2017-11-14",
+    "time": "2019-02-09",
     "repositories": [
         {
             "type": "pear",
@@ -22,8 +22,7 @@
     "require": {
         "php": "^5.3 || ^7",
         "pear-pear.horde.org/Horde_Date": "^2.3",
-        "pear-pear.horde.org/Horde_Exception": "^2",
-        "pear-pear.php.net/Math_BigInteger": "^1.0.2"
+        "pear-pear.horde.org/Horde_Exception": "^2"
     },
     "replace": {
         "pear-pear.horde.org/Horde_Mapi": "1.*",
