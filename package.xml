@@ -69,6 +69,9 @@
    <pearinstaller>
     <min>1.7.0</min>
    </pearinstaller>
+   <extension>
+    <name>bcmath</name>
+   </extension>
    <package>
     <name>Horde_Date</name>
     <channel>pear.horde.org</channel>

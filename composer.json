@@ -21,6 +21,7 @@
     ],
     "require": {
         "php": "^5.3 || ^7",
+        "ext-bcmath": "*",
         "pear-pear.horde.org/Horde_Date": "^2.3",
         "pear-pear.horde.org/Horde_Exception": "^2"
     },
