@@ -29,4 +29,5 @@ dependencies:
     pear:
       pear.horde.org/Horde_Date: ^2.3
       pear.horde.org/Horde_Exception: ^2
-      pear.php.net/Math_BigInteger: ^1.0.2
+    ext:
+      bcmath: '*'
