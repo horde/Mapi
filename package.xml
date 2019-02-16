@@ -11,7 +11,7 @@
   <email>mrubinsk@horde.org</email>
   <active>yes</active>
  </lead>
- <date>2019-02-09</date>
+ <date>2019-02-16</date>
  <version>
   <release>1.0.10</release>
   <api>1.0.0</api>
@@ -22,7 +22,7 @@
  </stability>
  <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
  <notes>
-* 
+* [mjr] Remove Autoloading of unused Math_BigInteger (Remi Collet &lt;remi@remirepo.net&gt;, PR #2).
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
@@ -50,7 +50,6 @@
        <file name="filetime" role="test" />
       </dir> <!-- /test/Horde/Mapi/fixtures -->
       <file name="AllTests.php" role="test" />
-      <file name="Autoload.php" role="test" />
       <file name="bootstrap.php" role="test" />
       <file name="MapiTest.php" role="test" />
       <file name="TimezoneTest.php" role="test" />
@@ -96,7 +95,6 @@
    <install as="Horde/Mapi/Exception.php" name="lib/Horde/Mapi/Exception.php" />
    <install as="Horde/Mapi/Timezone.php" name="lib/Horde/Mapi/Timezone.php" />
    <install as="Horde/Mapi/AllTests.php" name="test/Horde/Mapi/AllTests.php" />
-   <install as="Horde/Mapi/Autoload.php" name="test/Horde/Mapi/Autoload.php" />
    <install as="Horde/Mapi/bootstrap.php" name="test/Horde/Mapi/bootstrap.php" />
    <install as="Horde/Mapi/MapiTest.php" name="test/Horde/Mapi/MapiTest.php" />
    <install as="Horde/Mapi/TimezoneTest.php" name="test/Horde/Mapi/TimezoneTest.php" />
@@ -263,10 +261,10 @@
     <release>stable</release>
     <api>stable</api>
    </stability>
-   <date>2019-02-09</date>
+   <date>2019-02-16</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
-* 
+* [mjr] Remove Autoloading of unused Math_BigInteger (Remi Collet &lt;remi@remirepo.net&gt;, PR #2).
    </notes>
   </release>
  </changelog>

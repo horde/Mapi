@@ -10,7 +10,6 @@
     uri: http://www.horde.org/licenses/lgpl21
   notes: |
     [mjr] Remove Autoloading of unused Math_BigInteger (Remi Collet <remi@remirepo.net>, PR #2).
-
 1.0.9:
   api: 1.0.0
   state:

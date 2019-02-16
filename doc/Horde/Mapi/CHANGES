@@ -2,7 +2,8 @@
 v1.0.10
 -------
 
-
+[mjr] Remove Autoloading of unused Math_BigInteger (Remi Collet
+      <remi@remirepo.net>, PR #2).
 
 
 ------
@@ -10,7 +11,6 @@ v1.0.9
 ------
 
 [mjr] No longer support Math_BigInteger, require the bcmath extension instead.
-
 
 
 ------
