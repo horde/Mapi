@@ -21,6 +21,7 @@
  </stability>
  <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
  <notes>
+* [mjr] Remove Autoloading of unused Math_BigInteger (Remi Collet &lt;remi@remirepo.net&gt;, PR #2).
 * [mjr] No longer support Math_BigInteger, require the bcmath extension instead.
  </notes>
  <contents>
@@ -130,7 +131,7 @@
    <date>2014-01-18</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
-*
+* 
    </notes>
   </release>
   <release>
@@ -250,6 +251,7 @@
    <date>2019-02-09</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
+* [mjr] Remove Autoloading of unused Math_BigInteger (Remi Collet &lt;remi@remirepo.net&gt;, PR #2).
 * [mjr] No longer support Math_BigInteger, require the bcmath extension instead.
    </notes>
   </release>
