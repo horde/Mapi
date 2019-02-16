@@ -4,12 +4,13 @@
   state:
     release: stable
     api: stable
-  date: 2019-02-09
+  date: 2019-02-16
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |+
-    
+  notes: |
+    [mjr] Remove Autoloading of unused Math_BigInteger (Remi Collet <remi@remirepo.net>, PR #2).
+
 1.0.9:
   api: 1.0.0
   state:
@@ -19,9 +20,8 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |+
+  notes: |
     [mjr] No longer support Math_BigInteger, require the bcmath extension instead.
-    
 1.0.8:
   api: 1.0.0
   state:
