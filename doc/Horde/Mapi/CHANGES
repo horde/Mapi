@@ -1,6 +1,6 @@
-------
-v1.0.9
-------
+------------
+v2.0.0alpha1
+------------
 
 [mjr] Remove Autoloading of unused Math_BigInteger (Remi Collet
       <remi@remirepo.net>, PR #2).

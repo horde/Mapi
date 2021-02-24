@@ -3,8 +3,8 @@ id: Mapi
 name: Mapi
 full: MAPI utility library
 description: >-
-  A library that provides various utility classes for dealing with Microsoft MAPI structured
-  data.
+  A library that provides various utility classes for dealing with Microsoft
+  MAPI structured data.
 list: dev
 type: library
 authors:
@@ -15,11 +15,11 @@ authors:
     active: true
     role: lead
 version:
-  release: 1.0.9
-  api: 1.0.0
+  release: 2.0.0alpha1
+  api: 2.0.0alpha1
 state:
-  release: stable
-  api: stable
+  release: alpha
+  api: alpha
 license:
   identifier: LGPL-2.1
   uri: http://www.horde.org/licenses/lgpl21

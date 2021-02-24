@@ -1,7 +1,7 @@
 {
     "name": "horde/mapi",
     "description": "MAPI utility library",
-    "type": "library",
+    "type": "horde-library",
     "homepage": "https://www.horde.org",
     "license": "LGPL-2.1",
     "authors": [
@@ -11,26 +11,28 @@
             "role": "lead"
         }
     ],
-    "version": "1.0.9",
-    "time": "2017-11-11",
+    "version": "2.0.0alpha1",
+    "time": "2021-02-24",
     "repositories": [
         {
-            "type": "pear",
-            "url": "https://pear.horde.org"
+            "type": "composer",
+            "url": "https://horde-satis.maintaina.com/"
         }
     ],
     "require": {
+        "horde/horde-installer-plugin": "*",
         "php": "^5.3 || ^7",
-        "pear-pear.horde.org/Horde_Date": "^2.3",
-        "pear-pear.horde.org/Horde_Exception": "^2"
+        "horde/date": "^2.3",
+        "horde/exception": "^2",
+        "ext-bcmath": "*"
     },
-    "replace": {
-        "pear-pear.horde.org/Horde_Mapi": "1.*",
-        "pear-horde/Horde_Mapi": "1.*"
-    },
+    "suggest": {},
     "autoload": {
         "psr-0": {
             "Horde_Mapi": "lib/"
+        },
+        "psr-4": {
+            "Horde\\Mapi\\": "src/"
         }
     }
 }
