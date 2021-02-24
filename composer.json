@@ -30,9 +30,6 @@
     "autoload": {
         "psr-0": {
             "Horde_Mapi": "lib/"
-        },
-        "psr-4": {
-            "Horde\\Mapi\\": "src/"
         }
     }
 }
