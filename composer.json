@@ -21,9 +21,9 @@
     ],
     "require": {
         "horde/horde-installer-plugin": "*",
-        "php": "^5.3 || ^7",
-        "horde/date": "^2.3",
-        "horde/exception": "^2",
+        "php": "^7",
+        "horde/date": "^3",
+        "horde/exception": "^3",
         "ext-bcmath": "*"
     },
     "suggest": {},
