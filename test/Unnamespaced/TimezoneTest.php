@@ -6,7 +6,12 @@
  * @category Horde
  * @package Mapi_Utils
  */
-class Horde_Mapi_TimezoneTest extends Horde_Test_Case
+namespace Horde\Mapi\Test\Unnamespaced;
+use Horde_Test_Case;
+use \Horde_Mapi_Timezone;
+use \Horde_Date;
+
+class TimezoneTest extends Horde_Test_Case
 {
 
     protected $_offsets = array(
@@ -106,13 +111,13 @@ class Horde_Mapi_TimezoneTest extends Horde_Test_Case
     );
 
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->_oldTimezone = date_default_timezone_get();
         date_default_timezone_set('America/New_York');
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         date_default_timezone_set($this->_oldTimezone);
     }

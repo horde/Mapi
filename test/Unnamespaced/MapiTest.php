@@ -8,6 +8,9 @@
  * @package    Mapi_Utils
  * @subpackage UnitTests
  */
+namespace Horde\Mapi\Test\Unnamespaced;
+use PHPUnit\Framework\TestCase;
+use \Horde_Mapi;
 
 /**
  * @author     Michael J Rubinsky <mrubinsk@horde.org>
@@ -16,7 +19,7 @@
  * @package    Mapi_Utils
  * @subpackage UnitTests
  */
-class Horde_Mapi_MapiTest extends PHPUnit_Framework_TestCase
+class MapiTest extends TestCase
 {
 
     public function testFiletimeToUnixTime()

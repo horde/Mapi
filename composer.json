@@ -3,7 +3,7 @@
     "description": "MAPI utility library",
     "type": "library",
     "homepage": "https://www.horde.org",
-    "license": "LGPL-2.1",
+    "license": "LGPL-2.1-only",
     "authors": [
         {
             "name": "Michael J Rubinsky",
@@ -11,26 +11,38 @@
             "role": "lead"
         }
     ],
-    "version": "1.0.9",
-    "time": "2017-11-11",
+    "time": "2022-10-07",
     "repositories": [
         {
-            "type": "pear",
-            "url": "https://pear.horde.org"
+            "type": "composer",
+            "url": "https://horde-satis.maintaina.com"
         }
     ],
     "require": {
-        "php": "^5.3 || ^7",
-        "pear-pear.horde.org/Horde_Date": "^2.3",
-        "pear-pear.horde.org/Horde_Exception": "^2"
+        "php": "^7.4 || ^8",
+        "horde/date": "^3 || dev-FRAMEWORK_6_0",
+        "horde/exception": "^3 || dev-FRAMEWORK_6_0",
+        "ext-bcmath": "*"
     },
-    "replace": {
-        "pear-pear.horde.org/Horde_Mapi": "1.*",
-        "pear-horde/Horde_Mapi": "1.*"
+    "require-dev": {
+        "horde/test": "dev-FRAMEWORK_6_0",
+        "phpunit/phpunit": "^9"
     },
+    "suggest": {},
     "autoload": {
         "psr-0": {
             "Horde_Mapi": "lib/"
         }
-    }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Horde\\Mapi\\Test\\": "test/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "horde/horde-installer-plugin": true
+        }
+    },
+    "minimum-stability": "dev"
 }

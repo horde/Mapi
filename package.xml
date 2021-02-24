@@ -3,26 +3,25 @@
  <name>Horde_Mapi</name>
  <channel>pear.horde.org</channel>
  <summary>MAPI utility library</summary>
- <description>Provides various utility classes for dealing with Microsoft MAPI structured data.</description>
+ <description>A library that provides various utility classes for dealing with Microsoft MAPI structured data.</description>
  <lead>
   <name>Michael J Rubinsky</name>
   <user>mrubinsk</user>
   <email>mrubinsk@horde.org</email>
   <active>yes</active>
  </lead>
- <date>2017-11-11</date>
+ <date>2021-03-13</date>
  <version>
-  <release>1.0.9</release>
-  <api>1.0.0</api>
+  <release>2.0.0alpha4</release>
+  <api>2.0.0alpha1</api>
  </version>
  <stability>
-  <release>stable</release>
-  <api>stable</api>
+  <release>alpha</release>
+  <api>alpha</api>
  </stability>
  <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
  <notes>
-* [mjr] Remove Autoloading of unused Math_BigInteger (Remi Collet &lt;remi@remirepo.net&gt;, PR #2).
-* [mjr] No longer support Math_BigInteger, require the bcmath extension instead.
+* 
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
@@ -49,7 +48,6 @@
        <file name="filetime" role="test" />
       </dir> <!-- /test/Horde/Mapi/fixtures -->
       <file name="AllTests.php" role="test" />
-      <file name="Autoload.php" role="test" />
       <file name="bootstrap.php" role="test" />
       <file name="MapiTest.php" role="test" />
       <file name="TimezoneTest.php" role="test" />
@@ -62,29 +60,15 @@
  <dependencies>
   <required>
    <php>
-    <min>5.3.0</min>
+    <min>7.0.0</min>
     <max>8.0.0alpha1</max>
     <exclude>8.0.0alpha1</exclude>
    </php>
    <pearinstaller>
     <min>1.7.0</min>
    </pearinstaller>
-   <package>
-    <name>Horde_Date</name>
-    <channel>pear.horde.org</channel>
-    <min>2.3.0</min>
-    <max>3.0.0alpha1</max>
-    <exclude>3.0.0alpha1</exclude>
-   </package>
-   <package>
-    <name>Horde_Exception</name>
-    <channel>pear.horde.org</channel>
-    <min>2.0.0</min>
-    <max>3.0.0alpha1</max>
-    <exclude>3.0.0alpha1</exclude>
-   </package>
    <extension>
-     <name>bcmath</name>
+    <name>bcmath</name>
    </extension>
   </required>
  </dependencies>
@@ -96,7 +80,6 @@
    <install as="Horde/Mapi/Timezone.php" name="lib/Horde/Mapi/Timezone.php" />
    <install as="LICENSE" name="LICENSE" />
    <install as="Horde/Mapi/AllTests.php" name="test/Horde/Mapi/AllTests.php" />
-   <install as="Horde/Mapi/Autoload.php" name="test/Horde/Mapi/Autoload.php" />
    <install as="Horde/Mapi/bootstrap.php" name="test/Horde/Mapi/bootstrap.php" />
    <install as="Horde/Mapi/fixtures/filetime" name="test/Horde/Mapi/fixtures/filetime" />
    <install as="Horde/Mapi/MapiTest.php" name="test/Horde/Mapi/MapiTest.php" />
@@ -104,6 +87,18 @@
   </filelist>
  </phprelease>
  <changelog>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
   <release>
    <version>
     <release>1.0.0</release>
@@ -241,18 +236,63 @@
   </release>
   <release>
    <version>
-    <release>1.0.9</release>
-    <api>1.0.0</api>
+    <release>2.0.0alpha1</release>
+    <api>2.0.0alpha1</api>
    </version>
    <stability>
     <release>stable</release>
     <api>stable</api>
    </stability>
-   <date>2019-02-09</date>
+   <date>2021-02-24</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
 * [mjr] Remove Autoloading of unused Math_BigInteger (Remi Collet &lt;remi@remirepo.net&gt;, PR #2).
 * [mjr] No longer support Math_BigInteger, require the bcmath extension instead.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>2.0.0alpha2</release>
+    <api>2.0.0alpha1</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2021-02-24</date>
+   <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
+   <notes>
+* |+
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>2.0.0alpha3</release>
+    <api>2.0.0alpha1</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2021-03-13</date>
+   <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
+   <notes>
+* |+
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>2.0.0alpha4</release>
+    <api>2.0.0alpha1</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2021-03-13</date>
+   <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
+   <notes>
+* 
    </notes>
   </release>
  </changelog>
