@@ -25,8 +25,7 @@
         "ext-bcmath": "*"
     },
     "require-dev": {
-        "horde/test": "dev-FRAMEWORK_6_0",
-        "phpunit/phpunit": "^9"
+        "horde/test": "^3 || dev-FRAMEWORK_6_0"
     },
     "suggest": {},
     "autoload": {
@@ -43,6 +42,5 @@
         "allow-plugins": {
             "horde/horde-installer-plugin": true
         }
-    },
-    "minimum-stability": "dev"
+    }
 }

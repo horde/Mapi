@@ -4,12 +4,13 @@
   state:
     release: alpha
     api: alpha
-  date: 2021-03-13
+  date: 2022-10-07
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |+
-    
+  notes: |
+    [rla] Improve PHPUnit Test Suite and PHP 8.1 compliance.
+    |+
 2.0.0alpha3:
   api: 2.0.0alpha1
   state:
