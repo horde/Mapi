@@ -12,7 +12,7 @@
  </lead>
  <date>2022-10-07</date>
  <version>
-  <release>2.0.0alpha4</release>
+  <release>2.0.0alpha5</release>
   <api>2.0.0alpha1</api>
  </version>
  <stability>
@@ -21,8 +21,7 @@
  </stability>
  <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1-only</license>
  <notes>
-* [rla] Improve PHPUnit Test Suite and PHP 8.1 compliance.
-* |+
+* 
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
@@ -102,6 +101,19 @@
   </filelist>
  </phprelease>
  <changelog>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
   <release>
    <version>
     <release>1.0.0</release>
@@ -292,11 +304,26 @@
     <release>alpha</release>
     <api>alpha</api>
    </stability>
-   <date>2021-03-13</date>
-   <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1-only</license>
+   <date>2022-10-07</date>
+   <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
 * [rla] Improve PHPUnit Test Suite and PHP 8.1 compliance.
 * |+
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>2.0.0alpha5</release>
+    <api>2.0.0alpha1</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2022-10-07</date>
+   <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
+   <notes>
+* 
    </notes>
   </release>
  </changelog>
