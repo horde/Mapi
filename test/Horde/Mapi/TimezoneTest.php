@@ -106,13 +106,13 @@ class Horde_Mapi_TimezoneTest extends Horde_Test_Case
     );
 
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->_oldTimezone = date_default_timezone_get();
         date_default_timezone_set('America/New_York');
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         date_default_timezone_set($this->_oldTimezone);
     }

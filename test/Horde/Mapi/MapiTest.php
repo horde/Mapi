@@ -16,7 +16,7 @@
  * @package    Mapi_Utils
  * @subpackage UnitTests
  */
-class Horde_Mapi_MapiTest extends PHPUnit_Framework_TestCase
+class Horde_Mapi_MapiTest extends Horde_Test_Case
 {
 
     public function testFiletimeToUnixTime()
