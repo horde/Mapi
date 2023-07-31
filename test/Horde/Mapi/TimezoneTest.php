@@ -6,6 +6,7 @@
  * @category Horde
  * @package Mapi_Utils
  */
+#[\AllowDynamicProperties]
 class Horde_Mapi_TimezoneTest extends Horde_Test_Case
 {
 
