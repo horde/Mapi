@@ -1,5 +1,4 @@
 {
-    "minimum-stability": "dev",
     "name": "horde/mapi",
     "description": "MAPI utility library",
     "type": "library",
@@ -12,15 +11,10 @@
             "role": "lead"
         }
     ],
-    "time": "2022-10-07",
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://horde-satis.maintaina.com"
-        }
-    ],
+    "time": "2025-06-02",
+    "repositories": [],
     "require": {
-        "php": "^7.4 || ^8",
+        "php": "^8.1",
         "horde/date": "^3 || dev-FRAMEWORK_6_0",
         "horde/exception": "^3 || dev-FRAMEWORK_6_0",
         "ext-bcmath": "*"
@@ -40,8 +34,11 @@
         }
     },
     "config": {
-        "allow-plugins": {
-            "horde/horde-installer-plugin": true
+        "allow-plugins": {}
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-FRAMEWORK_6_0": "2.x-dev"
         }
     }
 }
