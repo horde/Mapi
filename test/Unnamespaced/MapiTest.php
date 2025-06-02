@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Horde Mapi_Utils tests.
  *
@@ -8,9 +9,11 @@
  * @package    Mapi_Utils
  * @subpackage UnitTests
  */
+
 namespace Horde\Mapi\Test\Unnamespaced;
+
 use PHPUnit\Framework\TestCase;
-use \Horde_Mapi;
+use Horde_Mapi;
 
 /**
  * @author     Michael J Rubinsky <mrubinsk@horde.org>
@@ -18,10 +21,10 @@ use \Horde_Mapi;
  * @license    http://www.horde.org/licenses/lgpl21 LGPL 2.1
  * @package    Mapi_Utils
  * @subpackage UnitTests
+ * @coversNothing
  */
 class MapiTest extends TestCase
 {
-
     public function testFiletimeToUnixTime()
     {
         $data = file_get_contents(__DIR__ . '/fixtures/filetime');
@@ -41,8 +44,9 @@ class MapiTest extends TestCase
         $fixture = 'BAAAAIIA4AB0xbcQGoLgCAfUCRDgQMnBJoXEAQAAAAAAAAAAEAAAAAvw7UtuTulOnjnjhns3jvM=';
         $uid = Horde_Mapi::getUidFromGoid($fixture);
         $this->assertEquals(
-          '040000008200E00074C5B7101A82E00800000000E040C9C12685C4010000000000000000100000000BF0ED4B6E4EE94E9E39E3867B378EF3',
-          $uid);
+            '040000008200E00074C5B7101A82E00800000000E040C9C12685C4010000000000000000100000000BF0ED4B6E4EE94E9E39E3867B378EF3',
+            $uid
+        );
 
         // vCal
         $fixture = 'BAAAAIIA4AB0xbcQGoLgCAAAAAAAAAAAAAAAAAAAAAAAAAAAMwAAAHZDYWwtVWlkAQAAAHs4MTQxMkQzQy0yQTI0LTRFOUQtQjIwRS0xMUY3QkJFOTI3OTl9AA==';

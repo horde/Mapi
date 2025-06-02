@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Base exception class for Horde_Mapi
  *
@@ -22,6 +23,4 @@
  * @author    Michael J Rubinsky <mrubinsk@horde.org>
  * @package   Mapi_Utils
  */
-class Horde_Mapi_Exception extends Horde_Exception_Wrapped
-{
-}
+class Horde_Mapi_Exception extends Horde_Exception_Wrapped {}

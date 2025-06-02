@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Horde_Mapi::
  *
@@ -74,11 +75,11 @@ class Horde_Mapi
             // If it's not a vCal UID, then it is Outlook style UID:
             // The entire decoded goid is converted to hex representation with
             // bytes 17 - 20 converted to zero
-            $hex = array();
+            $hex = [];
             foreach (str_split($goid) as $chr) {
                 $hex[] = sprintf('%02X', ord($chr));
             }
-            array_splice($hex, 16, 4, array('00', '00', '00', '00'));
+            array_splice($hex, 16, 4, ['00', '00', '00', '00']);
             return implode('', $hex);
         }
     }
@@ -91,7 +92,7 @@ class Horde_Mapi
      *
      * @return string  A Base64 encoded GOID
      */
-    public static function createGoid($uid, $options = array())
+    public static function createGoid($uid, $options = [])
     {
         // Bytes 1 - 16 MUST be equal to the GOID identifier:
         $arrayid = '040000008200E00074C5B7101A82E008';
@@ -153,12 +154,14 @@ class Horde_Mapi
     protected static function _flipEndian($str)
     {
         // make sure #digits is even
-        if ( strlen($str) & 1 )
+        if (strlen($str) & 1) {
             $str = '0' . $str;
+        }
 
         $t = '';
-        for ($i = strlen($str)-2; $i >= 0; $i-=2)
+        for ($i = strlen($str) - 2; $i >= 0; $i -= 2) {
             $t .= substr($str, $i, 2);
+        }
 
         return $t;
     }
@@ -170,20 +173,21 @@ class Horde_Mapi
             throw new Horde_Mapi_Exception('bcmath extension not loaded.');
         }
 
-        $hex = array(
-            '0'=>'0',   '1'=>'1',   '2'=>'2',   '3'=>'3',   '4'=>'4',
-            '5'=>'5',   '6'=>'6',   '7'=>'7',   '8'=>'8',   '9'=>'9',
-            'a'=>'10',  'b'=>'11',  'c'=>'12',  'd'=>'13',  'e'=>'14',  'f'=>'15',
-            'A'=>'10',  'B'=>'11',  'C'=>'12',  'D'=>'13',  'E'=>'14',  'F'=>'15'
-        );
+        $hex = [
+            '0' => '0',   '1' => '1',   '2' => '2',   '3' => '3',   '4' => '4',
+            '5' => '5',   '6' => '6',   '7' => '7',   '8' => '8',   '9' => '9',
+            'a' => '10',  'b' => '11',  'c' => '12',  'd' => '13',  'e' => '14',  'f' => '15',
+            'A' => '10',  'B' => '11',  'C' => '12',  'D' => '13',  'E' => '14',  'F' => '15',
+        ];
 
         $bci = '0';
         $len = strlen($str);
         for ($i = 0; $i < $len; ++$i) {
             $bci = bcmul($bci, '16');
             $ch = $str[$i];
-            if (isset($hex[$ch]))
+            if (isset($hex[$ch])) {
                 $bci = bcadd($bci, $hex[$ch]);
+            }
         }
 
         return $bci;

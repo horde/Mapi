@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Horde_Mapi_Util_Timezone::
  *
@@ -107,10 +108,30 @@ class Horde_Mapi_Timezone
             $offsets['dstbias'] = Horde_Mapi::chbo($offsets['dstbias']);
         }
 
-        $packed = pack('la64vvvvvvvvla64vvvvvvvvl',
-                $offsets['bias'], '', 0, $offsets['stdmonth'], $offsets['stdday'], $offsets['stdweek'], $offsets['stdhour'], $offsets['stdminute'], $offsets['stdsecond'], $offsets['stdmillis'],
-                $offsets['stdbias'], '', 0, $offsets['dstmonth'], $offsets['dstday'], $offsets['dstweek'], $offsets['dsthour'], $offsets['dstminute'], $offsets['dstsecond'], $offsets['dstmillis'],
-                $offsets['dstbias']);
+        $packed = pack(
+            'la64vvvvvvvvla64vvvvvvvvl',
+            $offsets['bias'],
+            '',
+            0,
+            $offsets['stdmonth'],
+            $offsets['stdday'],
+            $offsets['stdweek'],
+            $offsets['stdhour'],
+            $offsets['stdminute'],
+            $offsets['stdsecond'],
+            $offsets['stdmillis'],
+            $offsets['stdbias'],
+            '',
+            0,
+            $offsets['dstmonth'],
+            $offsets['dstday'],
+            $offsets['dstweek'],
+            $offsets['dsthour'],
+            $offsets['dstminute'],
+            $offsets['dstsecond'],
+            $offsets['dstmillis'],
+            $offsets['dstbias']
+        );
 
         return base64_encode($packed);
     }
@@ -125,7 +146,7 @@ class Horde_Mapi_Timezone
      */
     public static function getOffsetsFromDate(Horde_Date $date)
     {
-        $offsets = array(
+        $offsets = [
             'bias' => 0,
             'stdname' => '',
             'stdyear' => 0,
@@ -146,14 +167,14 @@ class Horde_Mapi_Timezone
             'dstminute' => 0,
             'dstsecond' => 0,
             'dstmillis' => 0,
-            'dstbias' => 0
-        );
+            'dstbias' => 0,
+        ];
 
         $timezone = $date->toDateTime()->getTimezone();
         // If transition parsing failed, we won't have a multi-element array.
         $transitions = self::_getTransitions($timezone, $date);
         if (!empty($transitions)) {
-            list($std, $dst) = self::_getTransitions($timezone, $date);
+            [$std, $dst] = self::_getTransitions($timezone, $date);
         }
         if (!empty($std)) {
             $offsets['bias'] = $std['offset'] / 60 * -1;
@@ -181,20 +202,20 @@ class Horde_Mapi_Timezone
     protected static function _getTransitions(DateTimeZone $timezone, Horde_Date $date)
     {
 
-        $std = $dst = array();
+        $std = $dst = [];
         $transitions = $timezone->getTransitions(
             mktime(0, 0, 0, 12, 1, $date->year - 1),
             mktime(24, 0, 0, 12, 31, $date->year)
         );
 
         if ($transitions === false) {
-            return array();
+            return [];
         }
 
         foreach ($transitions as $i => $transition) {
             try {
-               $d = new Horde_Date($transition['time']);
-               $d->setTimezone('UTC');
+                $d = new Horde_Date($transition['time']);
+                $d->setTimezone('UTC');
             } catch (Exception $e) {
                 continue;
             }
@@ -204,7 +225,7 @@ class Horde_Mapi_Timezone
                     $dst = $transition['isdst'] ? $transition : $transitions[$i + 1];
                     $std = $transition['isdst'] ? $transitions[$i + 1] : $transition;
                 } else {
-                    $dst = $transition['isdst'] ? $transition: null;
+                    $dst = $transition['isdst'] ? $transition : null;
                     $std = $transition['isdst'] ? null : $transition;
                 }
                 break;
@@ -213,7 +234,7 @@ class Horde_Mapi_Timezone
             }
         }
 
-        return array($std, $dst);
+        return [$std, $dst];
     }
 
     /**
@@ -236,8 +257,8 @@ class Horde_Mapi_Timezone
         $transitionDate = new Horde_Date($transitionDate);
         $offsets[$type . 'month'] = $transitionDate->format('n');
         $offsets[$type . 'day'] = $transitionDate->format('w');
-        $offsets[$type . 'minute'] = (int)$transitionDate->format('i');
-        $offsets[$type . 'hour'] = (int)$transitionDate->format('H');
+        $offsets[$type . 'minute'] = (int) $transitionDate->format('i');
+        $offsets[$type . 'hour'] = (int) $transitionDate->format('H');
         for ($i = 5; $i > 0; $i--) {
             if (self::_isNthOcurrenceOfWeekdayInMonth($transition['ts'], $i)) {
                 $offsets[$type . 'week'] = $i;
@@ -292,12 +313,12 @@ class Horde_Mapi_Timezone
             $offsets = self::getOffsetsFromSyncTZ($offsets);
         }
         $this->_setDefaultStartDate($offsets);
-        $timezones = array();
+        $timezones = [];
         foreach (DateTimeZone::listIdentifiers() as $timezoneIdentifier) {
             $timezone = new DateTimeZone($timezoneIdentifier);
             if (false !== ($matchingTransition = $this->_checkTimezone($timezone, $offsets))) {
                 if ($timezoneIdentifier == $expectedTimezone) {
-                    $timezones = array($timezoneIdentifier => $matchingTransition['abbr']);
+                    $timezones = [$timezoneIdentifier => $matchingTransition['abbr']];
                     break;
                 } else {
                     $timezones[$timezoneIdentifier] = $matchingTransition['abbr'];
@@ -306,7 +327,7 @@ class Horde_Mapi_Timezone
         }
 
         if (empty($timezones)) {
-           throw new Horde_Mapi_Exception('No timezone found for the given offsets');
+            throw new Horde_Mapi_Exception('No timezone found for the given offsets');
         }
 
         return $timezones;
@@ -320,7 +341,7 @@ class Horde_Mapi_Timezone
      *
      * @param array $offsets  Offsets may be avaluated for a given start year
      */
-    protected function _setDefaultStartDate(array $offsets = null)
+    protected function _setDefaultStartDate(?array $offsets = null)
     {
         if (!empty($this->_startDate)) {
             return;
@@ -347,7 +368,7 @@ class Horde_Mapi_Timezone
      */
     protected function _checkTimezone(DateTimeZone $timezone, array $offsets)
     {
-        list($std, $dst) = $this->_getTransitions($timezone, $this->_startDate);
+        [$std, $dst] = $this->_getTransitions($timezone, $this->_startDate);
         if ($this->_checkTransition($std, $dst, $offsets)) {
             return $std;
         }
@@ -383,7 +404,7 @@ class Horde_Mapi_Timezone
             }
             $daylightOffset = ($offsets['bias'] + $offsets['dstbias']) * 60 * -1;
             // the milestone is sending a positive value for daylightBias while it should send a negative value
-            $daylightOffsetMilestone = ($offsets['dstbias'] + ($offsets['dstbias'] * -1) ) * 60 * -1;
+            $daylightOffsetMilestone = ($offsets['dstbias'] + ($offsets['dstbias'] * -1)) * 60 * -1;
 
             if ($daylightOffset == $dst['offset'] || $daylightOffsetMilestone == $dst['offset']) {
                 $standardParsed = new DateTime($std['time']);
@@ -392,8 +413,7 @@ class Horde_Mapi_Timezone
                 if ($standardParsed->format('n') == $offsets['stdmonth'] &&
                     $daylightParsed->format('n') == $offsets['dstmonth'] &&
                     $standardParsed->format('w') == $offsets['stdday'] &&
-                    $daylightParsed->format('w') == $offsets['dstday'])
-                {
+                    $daylightParsed->format('w') == $offsets['dstday']) {
                     return self::_isNthOcurrenceOfWeekdayInMonth($dst['ts'], $offsets['dstweek']) &&
                            self::_isNthOcurrenceOfWeekdayInMonth($std['ts'], $offsets['stdweek']);
                 }
@@ -419,15 +439,15 @@ class Horde_Mapi_Timezone
         $original = new Horde_Date($timestamp);
         $original->setTimezone('UTC');
         if ($occurence == 5) {
-            $modified = $original->add(array('mday' => 7));
+            $modified = $original->add(['mday' => 7]);
             return $modified->month > $original->month;
         } else {
-            $modified = $original->sub(array('mday' => 7 * $occurence));
-            $modified2 = $original->sub(array('mday' => 7 * ($occurence - 1)));
+            $modified = $original->sub(['mday' => 7 * $occurence]);
+            $modified2 = $original->sub(['mday' => 7 * ($occurence - 1)]);
 
             return $modified->month < $original->month &&
                    $modified2->month == $original->month;
-       }
+        }
     }
 
 }

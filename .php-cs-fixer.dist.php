@@ -1,25 +1,21 @@
 <?php
+$potentialDirs = ['/lib', '/src', '/test', '/tests'];
 
-declare(strict_types=1);
+$finder = (new PhpCsFixer\Finder());
+foreach ($potentialDirs as $dir) {
+    $full = __DIR__ . $dir;
+    if (is_dir($full)) {
+        $finder->in($full);
+    }
+}
 
-$finder = PhpCsFixer\Finder::create()
-    // Lib is for legacy
-    ->exclude('lib')
-        // doc may contain ancient examples or illustrational shorthand
-    ->exclude('doc')
-    ->notPath('src/Symfony/Component/Translation/Tests/fixtures/resources.php')
-    ->in(__DIR__)
-;
+$finder->exclude(['fixtures']);
 
-$config = new PhpCsFixer\Config();
-return $config->setRules([
-    '@PSR12' => true,
-    '@PHP81Migration' => true,
-    'ordered_imports' => true,
-    'strict_param' => true,
-    'declare_strict_types' => true,
-    'method_argument_space' => true,
-    'array_syntax' => ['syntax' => 'short'],
+return (new PhpCsFixer\Config())
+    ->setRules([
+        '@PER-CS' => true,
+        '@PHP83Migration' => true,
+        'php_unit_test_class_requires_covers' => true,
     ])
-    ->setFinder($finder)->setFormat('txt')->setRiskyAllowed(true);
+    ->setFinder($finder)
 ;
