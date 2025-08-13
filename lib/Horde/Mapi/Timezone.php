@@ -293,7 +293,7 @@ class Horde_Mapi_Timezone
         if (isset($timezones[$expectedTimezone])) {
             return $expectedTimezone;
         } else {
-            return Horde_Date::getTimezoneAlias(current($timezones));
+            return Horde_Date::getTimezoneAlias(key($timezones));
         }
     }
 
