@@ -11,7 +11,7 @@
 /**
  * Utility functions for dealing with Microsoft MAPI Timezone format.
  *
- * Copyright 2009-2017 Horde LLC (http://www.horde.org/)
+ * Copyright 2009-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (LGPL). If you
  * did not receive this file, see http://www.horde.org/licenses/lgpl21.
@@ -398,8 +398,8 @@ class Horde_Mapi_Timezone
         // check each condition in a single if statement and break the chain
         // when one condition is not met - for performance reasons
         if ($standardOffset == $std['offset']) {
-            if ((empty($offsets['dstmonth']) && (empty($dst) || empty($dst['isdst']))) ||
-                (empty($dst) && !empty($offsets['dstmonth']))) {
+            if ((empty($offsets['dstmonth']) && (empty($dst) || empty($dst['isdst'])))
+                || (empty($dst) && !empty($offsets['dstmonth']))) {
                 // Offset contains DST, but no dst to compare
                 return true;
             }
@@ -411,12 +411,12 @@ class Horde_Mapi_Timezone
                 $standardParsed = new DateTime($std['time']);
                 $daylightParsed = new DateTime($dst['time']);
 
-                if ($standardParsed->format('n') == $offsets['stdmonth'] &&
-                    $daylightParsed->format('n') == $offsets['dstmonth'] &&
-                    $standardParsed->format('w') == $offsets['stdday'] &&
-                    $daylightParsed->format('w') == $offsets['dstday']) {
-                    return self::_isNthOcurrenceOfWeekdayInMonth($dst['ts'], $offsets['dstweek']) &&
-                           self::_isNthOcurrenceOfWeekdayInMonth($std['ts'], $offsets['stdweek']);
+                if ($standardParsed->format('n') == $offsets['stdmonth']
+                    && $daylightParsed->format('n') == $offsets['dstmonth']
+                    && $standardParsed->format('w') == $offsets['stdday']
+                    && $daylightParsed->format('w') == $offsets['dstday']) {
+                    return self::_isNthOcurrenceOfWeekdayInMonth($dst['ts'], $offsets['dstweek'])
+                           && self::_isNthOcurrenceOfWeekdayInMonth($std['ts'], $offsets['stdweek']);
                 }
             }
         }
@@ -446,8 +446,8 @@ class Horde_Mapi_Timezone
             $modified = $original->sub(['mday' => 7 * $occurence]);
             $modified2 = $original->sub(['mday' => 7 * ($occurence - 1)]);
 
-            return $modified->month < $original->month &&
-                   $modified2->month == $original->month;
+            return $modified->month < $original->month
+                   && $modified2->month == $original->month;
         }
     }
 
