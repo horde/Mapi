@@ -1,4 +1,20 @@
 ---
+2.0.0-RC1:
+  api: 2.0.0-RC1
+  state:
+    release: RC
+    api: RC
+  date: 2026-06-11
+  license:
+    identifier: LGPL-2.1-only
+    uri: https://spdx.org/licenses/LGPL-2.1-only.html
+  notes: |-
+    style: php-cs-fixer
+    fix(mapi): guard timezone transition check against incomplete offsets
+    Create README.md
+    chore: Update workflow dependency
+    Merge pull request #4 from erwinschrodinger1/FRAMEWORK_6_0
+    Handle non-abbreviated timezones correctly
 2.0.0-alpha5:
   api: 2.0.0-alpha1
   state:

@@ -15,10 +15,10 @@ authors:
     active: true
     role: lead
 version:
-  release: 2.0.0-alpha5
+  release: 2.0.0-RC1
   api: 2.0.0alpha1
 state:
-  release: alpha
+  release: RC
   api: alpha
 license:
   identifier: LGPL-2.1-only
@@ -34,3 +34,5 @@ dependencies:
   dev:
     composer:
       horde/test: ^3
+keywords: []
+vendor: horde
