@@ -388,7 +388,8 @@ class Horde_Mapi_Timezone
      */
     protected function _checkTransition(array $std, array $dst, array $offsets)
     {
-        if (empty($std) || empty($offsets)) {
+        if (empty($std) || empty($offsets)
+            || !isset($offsets['bias'], $offsets['stdbias'])) {
             return false;
         }
 
