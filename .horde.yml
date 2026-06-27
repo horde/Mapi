@@ -14,10 +14,10 @@ authors:
     active: true
     role: lead
 version:
-  release: 2.0.0-RC1
+  release: 2.0.0
   api: 2.0.0alpha1
 state:
-  release: RC
+  release: stable
   api: alpha
 license:
   identifier: LGPL-2.1-only

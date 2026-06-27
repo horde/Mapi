@@ -1,4 +1,14 @@
 ---
+2.0.0:
+  api: 2.0.0
+  state:
+    release: stable
+    api: stable
+  date: 2026-06-27
+  license:
+    identifier: LGPL-2.1-only
+    uri: https://spdx.org/licenses/LGPL-2.1-only.html
+  notes: 'chore: refresh qc fixes and platform deps'
 2.0.0-RC1:
   api: 2.0.0-RC1
   state:
@@ -8,13 +18,7 @@
   license:
     identifier: LGPL-2.1-only
     uri: https://spdx.org/licenses/LGPL-2.1-only.html
-  notes: |-
-    style: php-cs-fixer
-    fix(mapi): guard timezone transition check against incomplete offsets
-    Create README.md
-    chore: Update workflow dependency
-    Merge pull request #4 from erwinschrodinger1/FRAMEWORK_6_0
-    Handle non-abbreviated timezones correctly
+  notes: "style: php-cs-fixer\nfix(mapi): guard timezone transition check against incomplete offsets\nCreate README.md\nchore: Update workflow dependency\nMerge pull request #4 from erwinschrodinger1/FRAMEWORK_6_0\nHandle non-abbreviated timezones correctly"
 2.0.0-alpha5:
   api: 2.0.0-alpha1
   state:
@@ -24,8 +28,7 @@
   license:
     identifier: LGPL-2.1-only
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    fix: Implict nullable type. Also bump minimum php version to 8.1 and apply php-cs-fixer
+  notes: "fix: Implict nullable type. Also bump minimum php version to 8.1 and apply php-cs-fixer\n"
 2.0.0-alpha4:
   api: 2.0.0alpha1
   state:
@@ -35,10 +38,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    Original version string was 2.0.0alpha4
-    [rla] Improve PHPUnit Test Suite and PHP 8.1 compliance.
-    |+
+  notes: "Original version string was 2.0.0alpha4\n[rla] Improve PHPUnit Test Suite and PHP 8.1 compliance.\n|+\n"
 2.0.0-alpha3:
   api: 2.0.0alpha1
   state:
@@ -48,9 +48,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |-
-    Original version string was 2.0.0alpha3
-    |+
+  notes: "Original version string was 2.0.0alpha3\n|+"
 2.0.0-alpha2:
   api: 2.0.0alpha1
   state:
@@ -60,9 +58,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |-
-    Original version string was 2.0.0alpha2
-    |+
+  notes: "Original version string was 2.0.0alpha2\n|+"
 2.0.0-alpha1:
   api: 2.0.0alpha1
   state:
@@ -72,10 +68,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    Original version string was 2.0.0alpha1
-    [mjr] Remove Autoloading of unused Math_BigInteger (Remi Collet <remi@remirepo.net>, PR #2).
-    [mjr] No longer support Math_BigInteger, require the bcmath extension instead.
+  notes: "Original version string was 2.0.0alpha1\n[mjr] Remove Autoloading of unused Math_BigInteger (Remi Collet <remi@remirepo.net>, PR #2).\n[mjr] No longer support Math_BigInteger, require the bcmath extension instead.\n"
 1.0.8:
   api: 1.0.0
   state:
@@ -85,8 +78,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    [mjr] Fix dependency on Horde_Date 2.3.0.
+  notes: "[mjr] Fix dependency on Horde_Date 2.3.0.\n"
 1.0.7:
   api: 1.0.0
   state:
@@ -96,8 +88,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    [mjr] Work around BC break in PHP 5.5.10 with converting timezone abbreviations to full timezone names.
+  notes: "[mjr] Work around BC break in PHP 5.5.10 with converting timezone abbreviations to full timezone names.\n"
 1.0.6:
   api: 1.0.0
   state:
@@ -107,8 +98,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    [jan] Mark PHP 7 as supported.
+  notes: "[jan] Mark PHP 7 as supported.\n"
 1.0.5:
   api: 1.0.0
   state:
@@ -118,8 +108,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    [mjr] Remove bcmath extension requirement and add PEAR Math_BigInteger package in it's place.
+  notes: "[mjr] Remove bcmath extension requirement and add PEAR Math_BigInteger package in it's place.\n"
 1.0.4:
   api: 1.0.0
   state:
@@ -129,8 +118,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    [jan] Improve PSR-2 compatibility.
+  notes: "[jan] Improve PSR-2 compatibility.\n"
 1.0.3:
   api: 1.0.0
   state:
@@ -140,8 +128,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    [mjr] Make bcmath an optional, not required, extension (Bug #13285).
+  notes: "[mjr] Make bcmath an optional, not required, extension (Bug #13285).\n"
 1.0.2:
   api: 1.0.0
   state:
@@ -151,8 +138,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    [mjr] Clarify license is LGPL and fix package.xml/composer.json files.
+  notes: "[mjr] Clarify license is LGPL and fix package.xml/composer.json files.\n"
 1.0.1:
   api: 1.0.0
   state:
@@ -162,7 +148,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: ~
+  notes: null
 1.0.0:
   api: 1.0.0
   state:
@@ -172,5 +158,4 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    Initial release.
+  notes: "Initial release.\n"
