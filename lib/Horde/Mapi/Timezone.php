@@ -27,6 +27,11 @@
 class Horde_Mapi_Timezone
 {
     /**
+     * Minimum byte length of a TIME_ZONE_INFORMATION structure.
+     */
+    public const SYNC_TZ_BINARY_LENGTH = 172;
+
+    /**
      * Date to use as start date when iterating through offsets looking for a
      * transition.
      *
@@ -80,7 +85,17 @@ class Horde_Mapi_Timezone
                 . 'lstdbias/a64dstname/vdstyear/vdstmonth/vdstday/vdstweek/vdsthour/vdstminute/vdstsecond/vdstmillis/'
                 . 'ldstbias';
         }
-        $tz = unpack($format, base64_decode($data));
+        if (!is_string($data) || trim($data) === '') {
+            throw new Horde_Mapi_Exception('Invalid or empty MAPI timezone data');
+        }
+        $binary = base64_decode($data, true);
+        if ($binary === false || strlen($binary) < self::SYNC_TZ_BINARY_LENGTH) {
+            throw new Horde_Mapi_Exception('Invalid or empty MAPI timezone data');
+        }
+        $tz = unpack($format, $binary);
+        if ($tz === false) {
+            throw new Horde_Mapi_Exception('Unable to decode MAPI timezone data');
+        }
         if (!Horde_Mapi::isLittleEndian()) {
             $tz['bias'] = Horde_Mapi::chbo($tz['bias']);
             $tz['stdbias'] = Horde_Mapi::chbo($tz['stdbias']);

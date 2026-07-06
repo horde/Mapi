@@ -11,6 +11,7 @@
 namespace Horde\Mapi\Test\Unnamespaced;
 
 use Horde_Test_Case;
+use Horde_Mapi_Exception;
 use Horde_Mapi_Timezone;
 use Horde_Date;
 
@@ -137,6 +138,21 @@ class TimezoneTest extends Horde_Test_Case
             $offsets = Horde_Mapi_Timezone::getOffsetsFromSyncTZ($blob);
             foreach ($this->_offsets[$tz] as $key => $value) {
                 $this->assertEquals($value, $offsets[$key], "Comparing '$key' for '$tz'");
+            }
+        }
+    }
+
+    /**
+     * Invalid or empty MAPI timezone blobs must not trigger unpack() warnings.
+     */
+    public function testOffsetsFromSyncTZRejectsInvalidData()
+    {
+        foreach (['', ' ', '====', 'x'] as $blob) {
+            try {
+                Horde_Mapi_Timezone::getOffsetsFromSyncTZ($blob);
+                $this->fail('Expected Horde_Mapi_Exception for blob ' . json_encode($blob));
+            } catch (Horde_Mapi_Exception $e) {
+                $this->assertInstanceOf(Horde_Mapi_Exception::class, $e);
             }
         }
     }
