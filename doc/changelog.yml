@@ -1,4 +1,14 @@
 ---
+2.0.1:
+  api: 2.0.1
+  state:
+    release: stable
+    api: stable
+  date: 2026-07-08
+  license:
+    identifier: LGPL-2.1-only
+    uri: https://spdx.org/licenses/LGPL-2.1-only.html
+  notes: "fix(mapi): validate MAPI timezone blobs before unpack()\nchore: refresh CI bootstrap"
 2.0.0:
   api: 2.0.0
   state:
